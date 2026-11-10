@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login · Sales and Inventory Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="login-wrap">
+    <div class="login-card">
+      <div class="login-brand">
+        <div class="logo-circle"><span data-icon="box" data-size="40" data-stroke="1.5"></span></div>
+        <h1>Sales and Inventory Management System</h1>
+        <p class="muted">for Small Businesses</p>
+      </div>
+
+      <form id="loginForm" class="login-form" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <input id="username" class="input input-soft" type="text" placeholder="Enter your username" autocomplete="username" autofocus>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" class="input input-soft" type="password" placeholder="Enter your password" autocomplete="current-password">
+        </div>
+        <p id="loginError" class="form-error hidden" role="alert"></p>
+        <button type="submit" class="btn btn-cyan btn-block">Login</button>
+      </form>
+
+      <p class="login-foot">Small Business Inventory System</p>
+      <p class="demo-hint">Demo accounts: owner / owner123 &nbsp;·&nbsp; staff / staff123</p>
+    </div>
+  </main>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>

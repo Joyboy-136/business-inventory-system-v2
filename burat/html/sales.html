@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Point of Sale · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="pageTitle">Point of Sale</h1>
+        <div id="userMenu"></div>
+      </header>
+      <div class="pos-grid">
+        <section class="card pos-left" aria-label="Products">
+          <label class="search-box scan-box">
+            <span data-icon="scan" data-size="22"></span>
+            <input id="scan" type="text" placeholder="Scan barcode or search product (F2)" aria-label="Scan barcode or search product" autocomplete="off" autofocus>
+            <button type="button" class="clear-btn hidden" id="clearScan" aria-label="Clear search"><span data-icon="x" data-size="16"></span></button>
+          </label>
+          <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+          <div class="tiles" id="tiles"></div>
+        </section>
+
+        <section class="card pos-right" aria-label="Current sale">
+          <div class="section-head">
+            <h2>Current Sale</h2>
+            <button type="button" class="btn btn-outline btn-sm" id="clearCart">Clear</button>
+          </div>
+          <div class="cart" id="cart"></div>
+          <div class="total-row"><span>Total</span><strong id="saleTotal">₱0</strong></div>
+          <div class="field">
+            <label for="paid">Amount received</label>
+            <input id="paid" class="input" type="number" min="0" step="0.01" placeholder="Leave blank if exact">
+            <div class="pay-quick" id="payQuick"></div>
+          </div>
+          <div class="change-box" id="changeBox"><span id="changeLabel">Change</span><strong id="changeValue">₱0</strong></div>
+          <p class="form-error hidden" id="saleErr" role="alert"></p>
+          <button type="button" class="btn btn-blue btn-block btn-lg" id="completeBtn">Complete Sale (F9)</button>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="../js/sales.js"></script>
+</body>
+</html>

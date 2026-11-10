@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Management · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="pageTitle">Product Management</h1>
+        <div id="userMenu"></div>
+      </header>
+      <div class="notice hidden" id="staffNote">Changes you make here are sent to the owner for approval. You will be asked for your name and ID number.</div>
+      <div class="toolbar">
+        <label class="search-box">
+          <span data-icon="search" data-size="20"></span>
+          <input id="search" type="text" placeholder="Search product, ID or barcode..." aria-label="Search product">
+          <button type="button" class="clear-btn hidden" id="clearSearch" aria-label="Clear search"><span data-icon="x" data-size="16"></span></button>
+        </label>
+        <a href="archived.html" class="btn btn-outline hidden" id="archivedLink"><span data-icon="archive" data-size="18"></span> <span id="archivedLabel">Archived</span></a>
+        <a href="add-product.html" class="btn btn-primary" id="addBtn"><span data-icon="plus" data-size="18"></span> Add Product</a>
+      </div>
+
+      <div class="table-card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th><th>Product Name</th><th>Category</th><th>Barcode</th><th>Price</th><th class="owner-col hidden">Cost</th><th>Stock</th><th>Status</th><th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="pager" id="pager"></div>
+    </main>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="../js/products.js"></script>
+</body>
+</html>

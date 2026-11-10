@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigation Flow · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="pageTitle">Navigation Flow</h1>
+        <div id="userMenu"></div>
+      </header>
+      <section class="flow-card">
+        <svg viewBox="0 0 1000 440" role="img" aria-label="Flow: Login to Dashboard, then the main modules">
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+              <path d="M0,0 L10,4 L0,8 Z" fill="#1AA6B0"/>
+            </marker>
+          </defs>
+
+          <g stroke="#1AA6B0" stroke-width="2" fill="none">
+            <line x1="495" y1="86" x2="495" y2="116" marker-end="url(#arrow)"/>
+            <line x1="495" y1="172" x2="495" y2="220"/>
+            <line x1="90" y1="220" x2="900" y2="220"/>
+            <line x1="90" y1="220" x2="90" y2="256" marker-end="url(#arrow)"/>
+            <line x1="252" y1="220" x2="252" y2="256" marker-end="url(#arrow)"/>
+            <line x1="414" y1="220" x2="414" y2="256" marker-end="url(#arrow)"/>
+            <line x1="576" y1="220" x2="576" y2="256" marker-end="url(#arrow)"/>
+            <line x1="738" y1="220" x2="738" y2="256" marker-end="url(#arrow)"/>
+            <line x1="900" y1="220" x2="900" y2="256" marker-end="url(#arrow)"/>
+            <line x1="90" y1="312" x2="90" y2="366" marker-end="url(#arrow)"/>
+            <line x1="252" y1="312" x2="252" y2="366" marker-end="url(#arrow)"/>
+            <line x1="900" y1="312" x2="900" y2="366" marker-end="url(#arrow)"/>
+          </g>
+          <a class="flow-node " href="index.html" id="nodeLogin" aria-label="Login"><rect x="395" y="30" width="200" height="56" rx="10"/><text x="495" y="58" text-anchor="middle" dominant-baseline="central">Login</text></a>
+          <a class="flow-node" href="dashboard.html" aria-label="Dashboard"><rect x="395" y="116" width="200" height="56" rx="10"/><text x="495" y="144" text-anchor="middle" dominant-baseline="central">Dashboard</text></a>
+          <a class="flow-node" href="products.html" aria-label="Products"><rect x="20" y="256" width="140" height="56" rx="10"/><text x="90" y="284" text-anchor="middle" dominant-baseline="central">Products</text></a>
+          <a class="flow-node" href="sales.html" aria-label="Point of Sale"><rect x="182" y="256" width="140" height="56" rx="10"/><text x="252" y="284" text-anchor="middle" dominant-baseline="central">Point of Sale</text></a>
+          <a class="flow-node" href="inventory.html" aria-label="Inventory"><rect x="344" y="256" width="140" height="56" rx="10"/><text x="414" y="284" text-anchor="middle" dominant-baseline="central">Inventory</text></a>
+          <a class="flow-node" href="reports.html" aria-label="Reports"><rect x="506" y="256" width="140" height="56" rx="10"/><text x="576" y="284" text-anchor="middle" dominant-baseline="central">Reports</text></a>
+          <a class="flow-node" href="approvals.html" aria-label="Approvals"><rect x="668" y="256" width="140" height="56" rx="10"/><text x="738" y="284" text-anchor="middle" dominant-baseline="central">Approvals</text></a>
+          <a class="flow-node" href="staff.html" aria-label="Staff"><rect x="830" y="256" width="140" height="56" rx="10"/><text x="900" y="284" text-anchor="middle" dominant-baseline="central">Staff</text></a>
+          <a class="flow-node sub" href="archived.html" aria-label="Archived"><rect x="20" y="366" width="140" height="56" rx="10"/><text x="90" y="394" text-anchor="middle" dominant-baseline="central">Archived</text></a>
+          <a class="flow-node sub" href="sales-history.html" aria-label="Sales History"><rect x="182" y="366" width="140" height="56" rx="10"/><text x="252" y="394" text-anchor="middle" dominant-baseline="central">Sales History</text></a>
+          <a class="flow-node sub" href="activity.html" aria-label="Activity Log"><rect x="830" y="366" width="140" height="56" rx="10"/><text x="900" y="394" text-anchor="middle" dominant-baseline="central">Activity Log</text></a>
+        </svg>
+        <p class="flow-note">Click a box to open that page. Only the owner can see this page.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="../js/flow.js"></script>
+</body>
+</html>

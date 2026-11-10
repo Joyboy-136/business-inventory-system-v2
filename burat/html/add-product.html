@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Product · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="pageTitle">Add Product</h1>
+        <div id="userMenu"></div>
+      </header>
+      <div class="notice hidden" id="staffNote">This will be sent to the owner for approval. You will be asked for your name and ID number when you save.</div>
+      <form class="form-card" id="productForm" novalidate>
+        <div class="form-cols">
+          <div class="col">
+            <div class="field">
+              <label for="pName">Product Name</label>
+              <input id="pName" class="input" type="text" placeholder="Enter product name" maxlength="80" autocomplete="off">
+              <p class="field-error" id="err-pName"></p>
+            </div>
+            <div class="field">
+              <label for="pCategory">Category</label>
+              <select id="pCategory" class="input"></select>
+              <p class="field-error" id="err-pCategory"></p>
+            </div>
+            <div class="field">
+              <label for="pPrice">Selling Price</label>
+              <div class="input-group" id="priceGroup">
+                <span class="prefix">₱</span>
+                <input id="pPrice" class="input" type="number" min="0" step="0.01" placeholder="Enter price">
+              </div>
+              <p class="field-error" id="err-pPrice"></p>
+            </div>
+            <div class="field" id="costField">
+              <label for="pCost">Cost per item</label>
+              <div class="input-group" id="costGroup">
+                <span class="prefix">₱</span>
+                <input id="pCost" class="input" type="number" min="0" step="0.01" placeholder="What you paid for one item">
+              </div>
+              <p class="field-error" id="err-pCost"></p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="field">
+              <label for="pBarcode">Barcode</label>
+              <input id="pBarcode" class="input" type="text" placeholder="Scan or type the barcode (optional)" maxlength="40" autocomplete="off">
+              <p class="field-error" id="err-pBarcode"></p>
+            </div>
+            <div class="field">
+              <label for="pQty">Quantity</label>
+              <input id="pQty" class="input" type="number" min="0" step="1" placeholder="Enter quantity">
+              <p class="hint hidden" id="qtyHint">To change stock, use Restock or Stock correction on the Product Management page.</p>
+              <p class="field-error" id="err-pQty"></p>
+            </div>
+            <div class="field">
+              <label for="pDesc">Description</label>
+              <textarea id="pDesc" class="textarea" placeholder="Enter product description" maxlength="500"></textarea>
+            </div>
+            <div class="field">
+              <div class="upload" id="upload" tabindex="0" role="button" aria-label="Upload product image">
+                <span data-icon="upload" data-size="26"></span>
+                <span>Upload product image</span>
+                <small>(optional)</small>
+              </div>
+              <input id="fileInput" type="file" accept="image/*" class="hidden">
+              <p class="field-error" id="err-image"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" id="cancelBtn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="saveBtn">Save</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="../js/add-product.js"></script>
+</body>
+</html>

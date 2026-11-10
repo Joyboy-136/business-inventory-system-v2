@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Approvals · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="pageTitle">Approvals</h1>
+        <div id="userMenu"></div>
+      </header>
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab active" role="tab" data-tab="pending">Pending <span class="tab-count" id="pendingCount">0</span></button>
+        <button type="button" class="tab" role="tab" data-tab="history">History</button>
+      </div>
+      <div id="list"></div>
+    </main>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="../js/approvals.js"></script>
+</body>
+</html>

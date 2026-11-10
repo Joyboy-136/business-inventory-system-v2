@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory Monitoring · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="pageTitle">Inventory Monitoring</h1>
+        <div id="userMenu"></div>
+      </header>
+      <div class="toolbar">
+        <label class="search-box">
+          <span data-icon="search" data-size="20"></span>
+          <input id="search" type="text" placeholder="Search product..." aria-label="Search product">
+          <button type="button" class="clear-btn hidden" id="clearSearch" aria-label="Clear search"><span data-icon="x" data-size="18"></span></button>
+        </label>
+
+        <div class="filter-wrap">
+          <button type="button" class="filter-btn" id="filterBtn" aria-label="Filter" aria-expanded="false" title="Filter"><span data-icon="filter" data-size="20"></span></button>
+          <div class="filter-pop hidden" id="filterPop">
+            <div class="field">
+              <label for="fStatus">Status</label>
+              <select id="fStatus" class="input">
+                <option value="all">All</option>
+                <option value="in">In Stock</option>
+                <option value="low">Low Stock</option>
+                <option value="out">Out of Stock</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fCategory">Category</label>
+              <select id="fCategory" class="input"></select>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm" id="resetFilter">Reset filters</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Product Name</th><th>Category</th><th>Stock Level</th><th>Status</th></tr></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <p class="result-note" id="resultNote"></p>
+    </main>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="../js/inventory.js"></script>
+</body>
+</html>

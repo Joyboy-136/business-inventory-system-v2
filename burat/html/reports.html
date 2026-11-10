@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="pageTitle">Reports</h1>
+        <div id="userMenu"></div>
+      </header>
+      <div class="report-bar">
+        <div class="tabs" role="tablist" aria-label="Report type">
+          <button type="button" class="tab active" role="tab" data-kind="sales" aria-selected="true">Sales Report</button>
+          <button type="button" class="tab" role="tab" data-kind="inventory" aria-selected="false">Inventory Report</button>
+          <button type="button" class="tab" role="tab" data-kind="changes" aria-selected="false">Changes Report</button>
+        </div>
+        <div class="report-controls" id="salesControls">
+          <div class="seg" role="group" aria-label="Period">
+            <button type="button" class="seg-btn" data-period="daily">Daily</button>
+            <button type="button" class="seg-btn" data-period="weekly">Weekly</button>
+            <button type="button" class="seg-btn" data-period="monthly">Monthly</button>
+          </div>
+          <label class="sr-only" for="anchor">Date</label>
+          <input id="anchor" class="input" type="date">
+        </div>
+        <div class="report-actions">
+          <button type="button" class="btn btn-outline btn-sm" id="printBtn"><span data-icon="printer" data-size="16"></span> Print</button>
+          <button type="button" class="btn btn-outline btn-sm" id="csvBtn"><span data-icon="download" data-size="16"></span> CSV</button>
+          <button type="button" class="btn btn-primary btn-sm" id="pdfBtn"><span data-icon="download" data-size="16"></span> PDF</button>
+        </div>
+      </div>
+
+      <div id="report"></div>
+    </main>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="../js/export.js"></script>
+  <script src="../js/reports.js"></script>
+</body>
+</html>

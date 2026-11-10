@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales History · Sales &amp; Inventory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="pageTitle">Sales History</h1>
+        <div id="userMenu"></div>
+      </header>
+      <div class="notice hidden" id="staffNote">You can see today’s sales only. To cancel a sale, request a void; the owner will approve it.</div>
+      <div class="toolbar">
+        <label class="search-box">
+          <span data-icon="search" data-size="20"></span>
+          <input id="search" type="text" placeholder="Search receipt, product or cashier..." aria-label="Search sales">
+          <button type="button" class="clear-btn hidden" id="clearSearch" aria-label="Clear search"><span data-icon="x" data-size="16"></span></button>
+        </label>
+        <div class="date-filter hidden" id="dateFilter">
+          <label for="fromDate" class="sr-only">From</label><input id="fromDate" class="input" type="date">
+          <span class="muted">to</span>
+          <label for="toDate" class="sr-only">To</label><input id="toDate" class="input" type="date">
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Receipt</th><th>Date</th><th>Cashier</th><th>Items</th><th>Total</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="pager" id="pager"></div>
+    </main>
+  </div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/actions.js"></script>
+  <script src="../js/sales-history.js"></script>
+</body>
+</html>
